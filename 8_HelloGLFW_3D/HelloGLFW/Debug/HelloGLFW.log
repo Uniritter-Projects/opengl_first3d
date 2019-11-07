@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\alu201722556\downloads\3d\8_exemplo3d\8_helloglfw_3d\helloglfw\source.cpp(82): warning C4305: 'argumento': truncamento de 'double' para 'GLfloat'
+c:\users\alu201722556\downloads\3d\8_exemplo3d\8_helloglfw_3d\helloglfw\source.cpp(135): warning C4101: 'ratio': variável local não referenciada
+  HelloGLFW.vcxproj -> C:\Users\alu201722556\Downloads\3d\8_Exemplo3D\8_HelloGLFW_3D\Debug\HelloGLFW.exe
