@@ -15,4 +15,6 @@ All you need to do, it is run the .exe that is located in the project folder.
 
 * **Left/Right arrows:** Control the camera movement.
 
+* **Up/Down arrows:** Control the camera zoom.
+
 * **Backspace or 0 numpad:** Change view (Orthographic or perspective).
