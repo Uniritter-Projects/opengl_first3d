@@ -15,13 +15,17 @@ float alvoz = 0.0;
 float ang = 0.0;
 int proj = 0;
 
+double zNear = 1;
+double zFar = 120;
+double zoom = 40;
+
 void View() {
 
 	//Tipo de camera
 	if (proj == 0)
-		glOrtho(-30, 30, -30, 30, 1, 100);
+		glOrtho(-zoom, zoom, -zoom, zoom, zNear, zFar);
 	else if (proj == 1)
-		gluPerspective(120, 1, 1, 120);
+		gluPerspective(140, 1, zNear, zFar);
 
 	//Posição da camera
 	gluLookAt(posx, posy, posz, alvox, alvoy, alvoz, 0, 1, 0);
@@ -96,10 +100,26 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, GL_TRUE);
 
+	//Angle control
 	if (key == GLFW_KEY_LEFT && action == GLFW_PRESS)
 		ang += 10;
 	if (key == GLFW_KEY_RIGHT && action == GLFW_PRESS)
 		ang -= 10;
+
+	//Camera zoom
+	if (key == GLFW_KEY_UP && action == GLFW_PRESS)
+	{
+		zoom -= 10;
+		//zNear += 10;
+		//zFar -= 10;
+	}
+	if (key == GLFW_KEY_DOWN && action == GLFW_PRESS)
+	{
+		zoom += 10;
+		//zNear -= 10;
+		//zFar += 10;
+	}
+
 	if (key == GLFW_KEY_SPACE && action == GLFW_PRESS)
 	{
 		if (proj == 0)
