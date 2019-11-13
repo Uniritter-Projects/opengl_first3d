@@ -109,15 +109,14 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 	//Camera zoom
 	if (key == GLFW_KEY_UP && action == GLFW_PRESS)
 	{
-		zoom -= 10;
+		if (zoom > 20)
+			zoom -= 10;
 		//zNear += 10;
 		//zFar -= 10;
 	}
 	if (key == GLFW_KEY_DOWN && action == GLFW_PRESS)
 	{
 		zoom += 10;
-		//zNear -= 10;
-		//zFar += 10;
 	}
 
 	if (key == GLFW_KEY_SPACE && action == GLFW_PRESS)
